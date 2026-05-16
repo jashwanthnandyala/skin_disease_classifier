@@ -1,0 +1,7 @@
+streamlit==1.28.1
+tensorflow==2.14.0
+pillow==10.0.0
+numpy==1.24.3
+opencv-python==4.8.0.76
+flask
+google-generativeai
