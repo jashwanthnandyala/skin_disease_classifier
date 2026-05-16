@@ -1,6 +1,6 @@
-# Skin Disease Classifier - Web Application
+# Skin Disease Classifier (Deep Learning)
 
-A Streamlit-based web application for classifying skin diseases using a pre-trained deep learning model.
+This project is a high-accuracy image classification system designed to assist in identifying six different skin conditions. Built as a college-level capstone, it utilizes deep learning to provide both predictions and visual justifications.
 
 ## Features
 
