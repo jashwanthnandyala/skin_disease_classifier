@@ -44,8 +44,10 @@ skin_disease_classifier_final/
 3. Model ArchitectureThe system utilizes a Transfer Learning strategy:Base Model: ResNet50 pre-trained on the ImageNet dataset is used as a powerful feature extractor.Custom Head: The top layers are replaced with a Global Average Pooling layer, a Dense layer (1024 units) with ReLU activation, and a Dropout layer (0.5) to further reduce overfitting.Output: A final Dense layer with a Softmax activation function outputs the probability for the 6 skin condition classes.
 
 4. Training StrategyThe training was conducted in two distinct phases:
-   Phase 1: Feature Extraction: The ResNet50 base layers were frozen, and only the custom head was trained using the Adam optimizer with a learning rate of $1e-4$.
-   Phase 2: Fine-Tuning: The top 20 layers of the ResNet50 base were unfrozen and trained with a much smaller learning rate (1x10-5). This allows the model to adjust its high-level feature maps to the specific textures of skin conditions.
+
+  # Phase 1: Feature Extraction: The ResNet50 base layers were frozen, and only the custom head was trained using the Adam optimizer with a learning rate of $1e-4$.
+   
+  # Phase 2: Fine-Tuning: The top 20 layers of the ResNet50 base were unfrozen and trained with a much smaller learning rate (1x10-5). This allows the model to adjust its high-level feature maps to the specific textures of skin conditions.
 
 6. Evaluation & ExportPerformance: The final model is evaluated on a dedicated test set to report final accuracy.Persistence: The optimized weights are saved in the modern .keras format for deployment in the Streamlit application.
 
