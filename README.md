@@ -45,9 +45,9 @@ skin_disease_classifier_final/
 
 4. Training StrategyThe training was conducted in two distinct phases:
 
-  # Phase 1: Feature Extraction: The ResNet50 base layers were frozen, and only the custom head was trained using the Adam optimizer with a learning rate of $1e-4$.
+  - Phase 1: Feature Extraction: The ResNet50 base layers were frozen, and only the custom head was trained using the Adam optimizer with a learning rate of 1x10-4.
    
-  # Phase 2: Fine-Tuning: The top 20 layers of the ResNet50 base were unfrozen and trained with a much smaller learning rate (1x10-5). This allows the model to adjust its high-level feature maps to the specific textures of skin conditions.
+  - Phase 2: Fine-Tuning: The top 20 layers of the ResNet50 base were unfrozen and trained with a much smaller learning rate (1x10-5). This allows the model to adjust its high-level feature maps to the specific textures of skin conditions.
 
 6. Evaluation & ExportPerformance: The final model is evaluated on a dedicated test set to report final accuracy.Persistence: The optimized weights are saved in the modern .keras format for deployment in the Streamlit application.
 
